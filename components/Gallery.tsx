@@ -17,8 +17,8 @@ const lashStyles = [
     duration: '2 hrs',
     price: 70,
     color: '#D4A5A5', // blush accent
-    image: '/lashes/classic.jpg', // Add your image to /public/lashes/classic.jpg
-    video: '/lashes/classic.mp4', // Optional: Add video
+    image: 'https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=800&q=80', // Temporary placeholder
+    video: '', // Optional: Add video
   },
   {
     id: 'hybrid',
@@ -27,8 +27,8 @@ const lashStyles = [
     duration: '2 hrs',
     price: 70,
     color: '#B8972E',
-    image: '/lashes/hybrid.jpg',
-    video: '/lashes/hybrid.mp4',
+    image: 'https://images.unsplash.com/photo-1583001931096-959e942a7a8e?w=800&q=80',
+    video: '',
   },
   {
     id: 'russian',
@@ -37,8 +37,8 @@ const lashStyles = [
     duration: '2.5 hrs',
     price: 85,
     color: '#D4AF37', // gold
-    image: '/lashes/russian.jpg',
-    video: '/lashes/russian.mp4',
+    image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=800&q=80',
+    video: '',
   },
   {
     id: 'mega',
@@ -47,8 +47,8 @@ const lashStyles = [
     duration: '3 hrs',
     price: 95,
     color: '#E5C158',
-    image: '/lashes/mega.jpg',
-    video: '/lashes/mega.mp4',
+    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&q=80',
+    video: '',
   },
   {
     id: 'wet',
@@ -57,8 +57,8 @@ const lashStyles = [
     duration: '2.5 hrs',
     price: 85,
     color: '#D4AF37',
-    image: '/lashes/wet.jpg',
-    video: '/lashes/wet.mp4',
+    image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80',
+    video: '',
   },
 ]
 

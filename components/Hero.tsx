@@ -13,9 +13,9 @@ export default function Hero({ onBookClick, onViewStyles }: HeroProps) {
     <div className="relative min-h-screen flex flex-col">
       {/* Hero Image Container */}
       <div className="relative h-[65vh] overflow-hidden">
-        {/* Hero Image - Add your image to /public/hero.jpg */}
+        {/* Hero Image - Temporary placeholder, replace with /public/hero.jpg */}
         <Image
-          src="/hero.jpg"
+          src="https://images.unsplash.com/photo-1583001931096-959e942a7a8e?w=1080&q=80"
           alt="Lashes by Brooke - Beautiful eyelash extensions"
           fill
           className="object-cover object-top"
