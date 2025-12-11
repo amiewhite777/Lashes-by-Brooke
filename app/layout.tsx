@@ -2,14 +2,25 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Lashes by Brooke | Bristol\'s Finest Lash Extensions',
-  description: 'Heavenly results. London energy. Premium eyelash extensions in Bristol by Brooke. Book your set today.',
-  keywords: ['lash extensions', 'eyelashes', 'Bristol', 'beauty', 'Russian volume', 'classic lashes'],
+  title: 'Lashes by Brooke | Premium Lash Extensions Bristol',
+  description: 'Book your perfect lash set with Brooke in Bristol. Classic, Volume, Hybrid, and Wispy styles. Heavenly results, London energy. Expert eyelash extensions.',
+  keywords: ['lash extensions Bristol', 'eyelash technician Bristol', 'Russian volume lashes', 'classic lashes Bristol', 'hybrid lashes', 'wispy lashes', 'mega volume lashes', 'lash artist Bristol'],
   authors: [{ name: 'Lashes by Brooke' }],
   openGraph: {
+    title: 'Lashes by Brooke | Premium Lash Extensions Bristol',
+    description: 'Heavenly results. London energy. Book your perfect lash set today.',
+    type: 'website',
+    locale: 'en_GB',
+    siteName: 'Lashes by Brooke',
+  },
+  twitter: {
+    card: 'summary_large_image',
     title: 'Lashes by Brooke',
     description: 'Heavenly results. London energy.',
-    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 
