@@ -13,26 +13,18 @@ export default function Hero({ onBookClick, onViewStyles }: HeroProps) {
     <div className="relative min-h-screen flex flex-col">
       {/* Hero Image Container */}
       <div className="relative h-[65vh] overflow-hidden">
-        {/* Placeholder gradient background - replace with actual hero image */}
-        <div 
-          className="absolute inset-0 bg-gradient-to-b from-lash-charcoal via-lash-dark to-lash-black"
-          style={{
-            backgroundImage: `
-              linear-gradient(to bottom, transparent 0%, rgba(10,10,10,0.4) 60%, rgba(10,10,10,1) 100%),
-              url('/hero-placeholder.jpg')
-            `,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center top',
-          }}
+        {/* Hero Image - Add your image to /public/hero.jpg */}
+        <Image
+          src="/hero.jpg"
+          alt="Lashes by Brooke - Beautiful eyelash extensions"
+          fill
+          className="object-cover object-top"
+          priority
+          quality={90}
         />
-        
-        {/* Simulated model silhouette for placeholder */}
-        <div className="absolute inset-0 flex items-start justify-center pt-8">
-          <div className="relative w-full max-w-sm aspect-[3/4]">
-            {/* This is where the actual hero image will go */}
-            <div className="absolute inset-0 bg-gradient-to-b from-lash-charcoal/50 to-transparent rounded-full blur-3xl" />
-          </div>
-        </div>
+
+        {/* Dark gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-lash-black/40 to-lash-black" />
         
         {/* 11:11 Watermark */}
         <motion.div 

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react'
+import Image from 'next/image'
 
 interface GalleryProps {
   onBookStyle: (serviceId: string) => void
@@ -16,6 +17,8 @@ const lashStyles = [
     duration: '2 hrs',
     price: 70,
     color: '#D4A5A5', // blush accent
+    image: '/lashes/classic.jpg', // Add your image to /public/lashes/classic.jpg
+    video: '/lashes/classic.mp4', // Optional: Add video
   },
   {
     id: 'hybrid',
@@ -24,6 +27,8 @@ const lashStyles = [
     duration: '2 hrs',
     price: 70,
     color: '#B8972E',
+    image: '/lashes/hybrid.jpg',
+    video: '/lashes/hybrid.mp4',
   },
   {
     id: 'russian',
@@ -32,6 +37,8 @@ const lashStyles = [
     duration: '2.5 hrs',
     price: 85,
     color: '#D4AF37', // gold
+    image: '/lashes/russian.jpg',
+    video: '/lashes/russian.mp4',
   },
   {
     id: 'mega',
@@ -40,6 +47,8 @@ const lashStyles = [
     duration: '3 hrs',
     price: 95,
     color: '#E5C158',
+    image: '/lashes/mega.jpg',
+    video: '/lashes/mega.mp4',
   },
   {
     id: 'wet',
@@ -48,6 +57,8 @@ const lashStyles = [
     duration: '2.5 hrs',
     price: 85,
     color: '#D4AF37',
+    image: '/lashes/wet.jpg',
+    video: '/lashes/wet.mp4',
   },
 ]
 
@@ -132,27 +143,31 @@ export default function Gallery({ onBookStyle }: GalleryProps) {
           >
             {/* Video/Image Area */}
             <div className="flex-1 relative mx-6 rounded-2xl overflow-hidden bg-gradient-to-b from-lash-charcoal to-lash-dark">
-              {/* Placeholder for video - gradient background simulating eye close-up */}
-              <div 
-                className="absolute inset-0"
-                style={{
-                  background: `
-                    radial-gradient(ellipse at center, ${currentStyle.color}20 0%, transparent 70%),
-                    linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%)
-                  `,
-                }}
+              {/* Lash Style Image */}
+              <Image
+                src={currentStyle.image}
+                alt={currentStyle.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={90}
               />
-              
-              {/* Play Button Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20"
-                >
-                  <Play className="w-6 h-6 text-white ml-1" fill="white" />
-                </motion.button>
-              </div>
+
+              {/* Subtle overlay for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-lash-black/80 via-transparent to-transparent" />
+
+              {/* Optional: Play Button Overlay if video exists */}
+              {currentStyle.video && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20"
+                  >
+                    <Play className="w-6 h-6 text-white ml-1" fill="white" />
+                  </motion.button>
+                </div>
+              )}
 
               {/* Style Info Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-lash-black via-lash-black/80 to-transparent">
